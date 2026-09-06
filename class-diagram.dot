@@ -1,0 +1,17 @@
+digraph ClassDiagram {
+    rankdir=TB;
+    node [shape=record, fontname="Helvetica", fontsize=11];
+    edge [fontname="Helvetica", fontsize=10];
+
+    GenreBuku [label="{GenreBuku|- idGenre: String\l- namaGenre: String\l- deskripsi: String\l|+ getIdGenre(): String\l+ getNamaGenre(): String\l+ getDeskripsi(): String\l}"];
+
+    Buku [label="{Buku|- idBuku: String\l- judul: String\l- penulis: String\l- tahunTerbit: int\l- genre: GenreBuku\l- status: StatusBuku\l- peminjamSaatIni: Member\l|+ getIdBuku(): String\l+ getStatus(): StatusBuku\l+ tandaiDipinjam(Member): void\l+ tandaiTersedia(): void\l}"];
+
+    Member [label="{Member|- idMember: String\l- nama: String\l- email: String\l- daftarBukuDipinjam: List\<Buku\>\l|+ pinjamBuku(Buku): void\l+ kembalikanBuku(Buku): void\l+ tampilkanBukuDipinjam(): void\l}"];
+
+    StatusBuku [label="{\<\<enumeration\>\>\nStatusBuku|TERSEDIA\lDIPINJAM\l}"];
+
+    Buku -> GenreBuku [arrowhead=odiamond, label="  1        many  \n mengklasifikasikan", dir=back];
+    Member -> Buku [arrowhead=vee, label="  1        0..*  \n meminjam"];
+    Buku -> StatusBuku [arrowhead=vee, style=dashed, label="memiliki"];
+}
