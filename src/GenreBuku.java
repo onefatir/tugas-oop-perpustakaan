@@ -3,6 +3,7 @@
  * Relasi: satu GenreBuku dapat dimiliki oleh banyak Buku (one-to-many / agregasi),
  * sehingga GenreBuku dapat berdiri sendiri walau tidak ada Buku yang mereferensikannya.
  */
+
 public class GenreBuku {
     private String idGenre;
     private String namaGenre;
