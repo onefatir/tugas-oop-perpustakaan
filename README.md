@@ -1,5 +1,12 @@
 # Sistem Perpustakaan - Tugas OOP
 
+Kelompok 3
+- Gerwyn Kusuma Rahadian J0403251036
+- Muhamad Fatir Kurniawan J0403251057
+- Aushaf Ghifary Ariyanto J0403251123
+- Muhammad Fahrul Ardhan J0403251138
+- Rafi Ahmad Fauzan J0403251139
+  
 Program Java sederhana yang mendemonstrasikan konsep Object-Oriented Programming (OOP)
 dengan merelasikan tiga entitas: `Member`, `Buku`, dan `GenreBuku`.
 
